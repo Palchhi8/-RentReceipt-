@@ -8,6 +8,7 @@ const propertyRoutes = require('./routes/propertyRoutes');
 const rentRoutes = require('./routes/rentRoutes');
 const userRoutes = require('./routes/userRoutes');
 const adminRoutes = require('./routes/adminRoutes');
+const testRoutes = require('./routes/testRoutes');
 
 const app = express();
 
@@ -22,6 +23,7 @@ app.use('/api/rent', rentRoutes);
 app.use('/api/user', userRoutes);
 app.use('/uploads', express.static('uploads'));
 app.use('/api/admin', adminRoutes);
+app.use('/api/test', testRoutes);
 
 // DB Connection
 mongoose.connect(process.env.MONGO_URI, {

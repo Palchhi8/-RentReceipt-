@@ -1,0 +1,23 @@
+meta {
+  name: Email
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:5000/api/test/send-test-email
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "to": "palchhi@gmail.com",
+    "subject": "Test Email from RentReceipt",
+    "text": "Hello! This is a test email sent from your RentReceipt backend using Outlook SMTP and an app password."
+  }
+}
